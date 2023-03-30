@@ -264,7 +264,66 @@ body {
     margin-top: 2px;
     opacity: 0.8;
 }
+/*small btn css*/
 
+.nav-toggle-btn .btn-inner {
+    width: 26px;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    transition: all .4s ease;
+}
+.nav-toggle-btn {
+    height: 30px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+}
+.nav-toggle-btn .btn-inner:before {
+    content: "";
+    height: 1px;
+    width: 26px;
+    position: absolute;
+    background: #fff;
+    top: -7px;
+}
+.nav-toggle-btn .btn-inner:after {
+    content: "";
+    height: 1px;
+    width: 26px;
+    position: absolute;
+    background: #fff;
+    top: 7px;
+}
+/*fixed header*/
+
+.fixed-header .header-top-bar {
+    display: none;
+}
+.fixed-header .main-navbar {
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    animation: smoothScroll 1s forwards;
+}
+
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
 /*Header section css End*/
 
 /*Main Slider section css start*/
@@ -707,7 +766,8 @@ body {
 }
 .list-sec-heading-outer .text {
     font-size: 14px;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     font-weight: 400;
     margin: auto;
     color: #000;
@@ -741,6 +801,7 @@ body {
     margin-top: 65px;
     text-align: center;
     position: relative;
+    height: 240px;
 }
 .about-us-item-content .title {
     color: #2c4a6b;
@@ -816,7 +877,7 @@ body {
     -o-transform: skewY(10deg);
     -ms-transform: skewY(10deg);
     transform: skewY(10deg);
-    background-color: rgb(225 15 40 / 62%);
+    background-color: rgb(252 157 1 / 62%);
     bottom: -85px;
     position: absolute;
     left: 0;
@@ -858,7 +919,7 @@ body {
 }
 
 .item-content-outer {
-    background: #e10f28;
+    background: #fc9d01;
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -912,7 +973,8 @@ body {
 
 .section-heading-outer .section-des {
     font-size: 14px;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     font-weight: 500;
     margin: auto;
     color: #fff;
@@ -1251,6 +1313,207 @@ body {
     font-size: 30px;
 }*/
 /*Testimonial section css End*/
+
+
+/* Plan & pricing page css start */
+
+.heading-wrapper {
+    text-align: center;
+    padding-top: 40px;
+}
+.heading-wrapper .heading {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.heading-wrapper .plan-section-link {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: #fc9d01;
+    color: #fff;
+    padding: 10px 30px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 10px;
+}
+.load-form-section {
+    background: url(../images/findloads-bg-black.png);
+    padding: 50px 0;
+    background-size: cover;
+    background-position: left;
+}
+.load-form-wrapper {
+    background: #f4f4f4;
+    padding: 15px;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    border-radius: 10px;
+}
+.load-form-wrapper .title {
+    font-size: 40px;
+    color: #000;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.load-form-wrapper .text {
+    font-size: 18px;
+    color: #7f7f7f;
+    margin-bottom: 25px;
+}
+.load-form .input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+.load-form .input-group:after {
+    content: "\f078";
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 5px;
+    font-size: 12px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.load-form .input-group select,
+.load-form .input-outer input {
+    height: 45px;
+}
+.load-find-btn {
+    border: none;
+    background: #d90110;
+    color: #fff;
+    padding: 10px 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+.load-refresh-btn {
+    display: inline-block;
+    background: #000;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+}
+.load-section-title {
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+    animation: shake 0.7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+.pricing-section {
+    padding: 50px 0;
+}
+.pricing-section-heading {
+    margin-bottom: 30px;
+}
+.pricing-section-heading .heading {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #000;
+}
+.pricing-item-wrapper {
+    border: 1px solid #dadddd;
+    border-radius: 5px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+.pricing-item-wrapper .title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 30px;
+}
+.pricing-item-wrapper .text {
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 40px;
+}
+.pricing-item-wrapper .price {
+    font-size: 70px;
+    font-weight: 700;
+    color: #000;
+}
+.pricing-item-wrapper .pricing-label {
+    font-size: 13px;
+    color: #000;
+    margin-bottom: 30px;
+}
+.pricing-item-wrapper .product-feature {
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+.pricing-item-wrapper .product-feature li {
+    border-bottom: 1px solid #f2f3f3;
+    padding: 15px 0px;
+    font-size: 15px;
+    color: #000;
+}
+.pricing-item-wrapper .product-feature li i {
+    color: #fc9d01;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.plan-buy-btn {
+    text-align: center;
+    border: 2px solid #fc9d01;
+    display: block;
+    padding: 10px 0;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.pricing-item-wrapper:hover .plan-buy-btn {
+    background: #fc9d01;
+    color: #fff;
+}
+
+
+/* Plan & pricing page css End */
 
 
 /*Footer section css start*/
@@ -1633,3 +1896,112 @@ body {
     color: #fc9d01;
 }
 /*Login page css End*/
+
+/*New Order tracking start*/
+.order-tracking-section {
+    padding: 50px 0;
+}
+
+.order-tracking-wrapper {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.order-tracking-wrapper .tracking-form .input-group {
+    margin-bottom: 20px;
+}
+
+.order-tracking-wrapper .tracking-form .input-group input {
+    height: 50px;
+}
+
+.order-tracking-wrapper .tracking-form .input-group button {
+    background: #fc9d01;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0 5px 5px 0;
+    border: none;
+}
+
+.order-tracking-items-outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-tracking{
+    text-align: center;
+    width: 25%;
+    position: relative;
+    display: block;
+}
+.order-tracking .is-complete{
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border: 0px solid #AFAFAF;
+    background-color: #f7be16;
+    margin: 0 auto;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+    z-index: 2;
+}
+.order-tracking .is-complete:after {
+    display: block;
+    position: absolute;
+    content: '';
+    height: 14px;
+    width: 7px;
+    top: -2px;
+    bottom: 0;
+    left: 5px;
+    margin: auto 0;
+    border: 0px solid #AFAFAF;
+    border-width: 0px 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+}
+.order-tracking.completed .is-complete{
+    border-color: #27aa80;
+    border-width: 0px;
+    background-color: #27aa80;
+}
+.order-tracking.completed .is-complete:after {
+    border-color: #fff;
+    border-width: 0px 3px 3px 0;
+    width: 7px;
+    left: 11px;
+    opacity: 1;
+}
+.order-tracking p {
+    color: #A4A4A4;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    line-height: 20px;
+}
+.order-tracking p span{font-size: 14px;}
+.order-tracking.completed p{color: #000;}
+.order-tracking::before {
+    content: '';
+    display: block;
+    height: 3px;
+    width: calc(100% - 40px);
+    background-color: #f7be16;
+    top: 13px;
+    position: absolute;
+    left: calc(-50% + 20px);
+    z-index: 0;
+}
+.order-tracking:first-child:before{display: none;}
+.order-tracking.completed:before{background-color: #27aa80;}
+/*New Order tracking end*/
+
+
+/*Order Tracking page css End*/
